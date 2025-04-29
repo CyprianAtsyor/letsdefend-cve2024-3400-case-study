@@ -62,7 +62,7 @@ On April 18, 2024, exploitation activity was detected against an internal PAN-OS
 ## What is CVE-2024-3400
 CVE-2024-3400 refers to a critical vulnerability in Palo Alto Networks PAN-OS, specifically affecting GlobalProtect gateways. Here's a breakdown of what is publicly known about it:
 
-#🔥 CVE-2024-3400 – Palo Alto PAN-OS Command Injection Vulnerability
+##🔥 CVE-2024-3400 – Palo Alto PAN-OS Command Injection Vulnerability
 CVSS Score: 10.0 (Critical)
 
 Published: April 2024
@@ -73,17 +73,17 @@ Exploitation: Confirmed in the wild (zero-day)
 
 Vulnerability Type: Unauthenticated command injection
 
-#🧠 What’s the Risk?
+##🧠 What’s the Risk?
 CVE-2024-3400 allows unauthenticated attackers to execute arbitrary commands on the firewall’s operating system. This essentially gives full control over affected devices without needing credentials — a serious breach point for any enterprise relying on Palo Alto firewalls.
 
-#⚠️ Conditions Required for Exploitation:
+##⚠️ Conditions Required for Exploitation:
 GlobalProtect gateway must be enabled.
 
 Specific PAN-OS versions (10.2.x, 11.0.x, 11.1.x).
 
 Exploitable via the internet if not behind additional security layers.
 
-#🔎 What Attackers Are Doing:
+##🔎 What Attackers Are Doing:
 Sending crafted requests to exploit the injection flaw.
 
 Deploying remote shells or downloading second-stage payloads.
@@ -96,7 +96,7 @@ Persistence mechanisms
 
 Lateral movement within networks
 
-#🛡️ Mitigation & Recommendations:
+##🛡️ Mitigation & Recommendations:
 Patch Immediately: Palo Alto released fixes; upgrade to non-vulnerable versions (e.g., 10.2.9-h1, 11.0.4-h1, 11.1.2-h3 or later).
 
 Check for Indicators of Compromise (IOCs) such as suspicious processes, outbound connections, or unusual CLI history.
