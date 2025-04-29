@@ -103,14 +103,14 @@ Check for Indicators of Compromise (IOCs) such as suspicious processes, outbound
 
 Use tools like Shodan or asset inventories to find vulnerable appliances.
 
-#🛠️ How to Investigate (e.g., via LetsDefend or SIEM):
+## 🛠️ How to Investigate (e.g., via LetsDefend or SIEM):
 Look for external IPs accessing GlobalProtect without valid authentication.
 
 Check for suspicious command execution in logs (show system processes, cat /etc/passwd, etc.).
 
 Monitor firewall behavior and alert on anomalous outbound connections.
 
-Would you like help turning this into a post, incident report, or investigation summary (e.g., for LinkedIn or LetsDefend)?
+
 
 
 
