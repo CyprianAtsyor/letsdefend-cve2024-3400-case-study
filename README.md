@@ -34,16 +34,16 @@ On April 18, 2024, exploitation activity was detected against an internal PAN-OS
 ## 🧠 Threat Intelligence
 ![Threat Intel](intel.png)
 
-### Step 1: Initial Exploit Detection  
+### Step 1: Initial Exploit Detection by searching on malpedia  
 ![Investigation Step 1](invest1.png)
 
-### Step 2: Analyzing Command Injection  
+### Step 2: Analyzing and investigating the hash  
 ![Investigation Step 2](invest2.png)
 
-### Step 3: C2 Communication & Payload  
+### Step 3: Another investigation  
 ![Investigation Step 3](invest3.png)
 
-### Step 4: Malicious Python Execution  
+### Step 4: IP address investigation  
 ![Investigation Step 4](invest4.png)
 
 
