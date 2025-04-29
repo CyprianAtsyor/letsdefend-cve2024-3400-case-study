@@ -10,6 +10,10 @@ This repository contains a detailed investigation and threat analysis of **CVE-2
 
 On April 18, 2024, exploitation activity was detected against an internal PAN-OS firewall using the vulnerable `/global-protect/login.esp` endpoint. The attacker used a crafted `SESSID` cookie containing a backtick-executed `curl` command to reach a remote C2 server hosted at `144.172.79.92` (Miami, Florida). The exploit payload leveraged `${IFS}` to bypass simple filters and used PAN-OS’s telemetry directory to stage malicious activity. The firewall responded with a `200 OK`, indicating that the payload was likely executed successfully.
 
+
+![Incident Overview](incident.png)
+
+
 ## 📄 Incident Summary
 
 - **Event ID**: 249  
@@ -27,6 +31,23 @@ On April 18, 2024, exploitation activity was detected against an internal PAN-OS
 - **MD5**: `0c1554888ce9ed0da1583dbdf7b31651`
 - **Malicious Script**: `update.py` (executed using `/usr/bin/python3`)
 
+## 🧠 Threat Intelligence
+![Threat Intel](intel.png)
+
+### Step 1: Initial Exploit Detection  
+![Investigation Step 1](invest1.png)
+
+### Step 2: Analyzing Command Injection  
+![Investigation Step 2](invest2.png)
+
+### Step 3: C2 Communication & Payload  
+![Investigation Step 3](invest3.png)
+
+### Step 4: Malicious Python Execution  
+![Investigation Step 4](invest4.png)
+
+
+
 ## 🧠 Behavioral Indicators
 
 - Abuse of `SESSID` for command injection
@@ -34,6 +55,24 @@ On April 18, 2024, exploitation activity was detected against an internal PAN-OS
 - Payload staging in `/opt/panlogs/tmp/device_telemetry`
 - Involvement of the `dt_send` process post-exploitation
 - Network callback to attacker's IP on port `4444`
+
+---
+
+## 📄 Log Evidence
+
+![Log Sample](log1.png)
+
+---
+
+## 🧩 Hash Correlation
+
+![Hash Match](same-hash.png)
+
+---
+
+## ✅ Points Gained LetsDefend
+![Key Points](points.png)
+
 
 ## 🚨 Impact
 
